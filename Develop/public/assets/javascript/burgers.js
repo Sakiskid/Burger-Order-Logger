@@ -2,16 +2,17 @@
 function eatBurger(id) {
     console.log("Burger with id: " + id + " was just eaten!");
     let burgerEl = $(`.burger-card[data-id="${id}"`)[0];
-    console.log(burgerEl)
 
     let burger = {
-        burger_name: $(burgerEl).find(".burger-card-title").val().trim(),
+        id: id,
+        burger_name: $(burgerEl).find(".burger-card-title").text().trim(),
+        devoured: 1
     }
-
-    console.log("Burgername: ", $(burgerEl).find(".burger-card-title").text().trim());
     
     $.ajax('/', {
-        type: "UPDATE",
+        type: "PUT",
         data: burger
     })
+
+    location.reload();
 }

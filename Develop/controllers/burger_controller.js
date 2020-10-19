@@ -11,8 +11,14 @@ router.get("/", (req, res) => {
     });
 });
 
+router.put("/", (req, res) => {
+    // console.log(req.body);
+    res.end();
+})
+
 router.get("/api/", (req, res) => {
    console.log("api"); 
 });
+
 
 module.exports = router;
