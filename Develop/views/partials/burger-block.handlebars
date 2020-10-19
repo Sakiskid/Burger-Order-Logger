@@ -1,7 +1,11 @@
-<div class="burger-card">
+<div class="burger-card" data-id="{{id}}" data-eaten="{{devoured}}">
     <div class="burger-card-title">
         {{burger_name}}
-        
     </div>
+    {{#unless devoured}}
+        <button class="burger-btn-eat" onclick="eatBurger({{id}})">
+            Order Up!
+        </button>
+    {{/unless}}
 
 </div>
