@@ -1,14 +1,19 @@
-<h1>Eeten burgers:</h1>
-{{#each burgers}}
-    {{#if devoured}}
-        {{> burger-block}}
-    {{/if}}
-{{/each}}
+<div id="burger-container">
+    <div id="burger-container-eaten">
+        <h1>Eeten burgers:</h1>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{> burger-block}}
+            {{/if}}
+        {{/each}}
+    </div>
 
-<hr>
-<h1>Uneaten burgers: </h1>
-{{#each burgers}}
-    {{#unless devoured}}
-        {{> burger-block}}
-    {{/unless}}
-{{/each}}
+    <div id="burger-container-uneaten">
+        <h1>Uneaten burgers: </h1>
+        {{#each burgers}}
+            {{#unless devoured}}
+                {{> burger-block}}
+            {{/unless}}
+        {{/each}}
+    </div>
+</div>

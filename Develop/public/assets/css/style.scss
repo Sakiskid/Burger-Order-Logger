@@ -1,3 +1,25 @@
+#burger-container {
+    display: grid;
+    grid-template-columns: [start] 1fr [uneaten] 1fr 0.5fr [eaten] 1fr [end] 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    #burger-container-eaten {
+        grid-column: eaten;
+        grid-row: 2 / span 2;
+    }
+
+    #burger-container-uneaten {
+        grid-column: uneaten;
+        grid-row: 2 / span 2;
+    }
+}
+
+
+.burger-card {
+    margin: 15px 0px;
+    border: black solid 2px;
+}
+
 .burger-card-title {
-    margin-top: 50px;
+    margin-bottom: 25px;
 }
