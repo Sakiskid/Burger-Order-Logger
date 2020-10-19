@@ -5,10 +5,10 @@ const router = express.Router();
 console.log("test");
 
 router.get("/", (req, res) => {
-    // res.render("index");
-    console.log("index");
-    res.end('test');
-    // res.render("index", hbsObject)
+    burger.all(function (data) {
+        let hbsObject = { burgers: data };
+        res.render("index", hbsObject)
+    });
 });
 
 router.get("/api/", (req, res) => {

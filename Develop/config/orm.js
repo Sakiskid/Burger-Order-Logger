@@ -1,10 +1,10 @@
 const connection = require("./connection");
 
 const orm = {
-    selectAll: async function () {
-        let query = `SELECT * FROM burgers`;
-        return await connection.query(query, (res) => {
-            console.log("Select all: \n" + res);
+    selectAll: function (cb) {
+        let query = `SELECT * FROM burgers;`;
+        connection.query(query, (err, res) => {
+            cb(res);
         });
     },
     insertOne: function () {
