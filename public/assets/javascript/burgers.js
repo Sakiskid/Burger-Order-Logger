@@ -6,7 +6,7 @@ function eatBurger(id) {
     let burger = {
         id: id,
         burger_name: $(burgerEl).find(".burger-card-title").text().trim(),
-        devoured: 1
+        eaten: 1
     }
     
     $.ajax('/', {

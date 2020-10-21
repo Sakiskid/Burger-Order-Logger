@@ -6,7 +6,7 @@
     <div id="burger-container-eaten">
         <h1>Eeten burgers:</h1>
         {{#each burgers}}
-            {{#if devoured}}
+            {{#if eaten}}
                 {{> burger-block}}
             {{/if}}
         {{/each}}
@@ -15,7 +15,7 @@
     <div id="burger-container-uneaten">
         <h1>Uneaten burgers: </h1>
         {{#each burgers}}
-            {{#unless devoured}}
+            {{#unless eaten}}
                 {{> burger-block}}
             {{/unless}}
         {{/each}}

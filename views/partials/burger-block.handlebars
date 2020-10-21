@@ -1,8 +1,8 @@
-<div class="burger-card" data-id="{{id}}" data-eaten="{{devoured}}">
+<div class="burger-card" data-id="{{id}}" data-eaten="{{eaten}}">
     <div class="burger-card-title">
         {{burger_name}}
     </div>
-    {{#unless devoured}}
+    {{#unless eaten}}
         <button class="burger-btn-eat" onclick="eatBurger({{id}})">
             Order Up!
         </button>
