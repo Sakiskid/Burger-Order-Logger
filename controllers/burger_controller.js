@@ -11,10 +11,18 @@ router.get("/", (req, res) => {
     });
 });
 
-router.put("/", (req, res) => {
-    // console.log(req.body);
-    res.end();
+router.post("/", (req, res) => {
+    console.log("Post req.body:", req.body.burgerName);
+    burger.insert(req.body.burgerName, function (data) {
+        
+        res.end();
+    })
 })
+
+router.put("/", (req, res) => {
+
+    res.end();
+});
 
 router.get("/api/", (req, res) => {
    console.log("api"); 
