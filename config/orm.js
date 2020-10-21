@@ -17,8 +17,15 @@ const orm = {
             cb(res);
         });
     },
-    updateOne: function () {
-        let query = ``;   
+    updateOne: function (id, cb) {
+        let query = `
+            UPDATE burgers
+            SET eaten = 1
+            WHERE id = ?`;   
+        connection.query(query, [id], (err, res) => {
+            if(err) throw err;
+            cb(res);
+        })
     }
 }
 

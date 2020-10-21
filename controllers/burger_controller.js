@@ -14,14 +14,14 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     console.log("Post req.body:", req.body.burgerName);
     burger.insert(req.body.burgerName, function (data) {
-        
         res.end();
     })
 })
 
 router.put("/", (req, res) => {
-
-    res.end();
+    burger.update(req.body.id, function(data) {
+        res.end();
+    })
 });
 
 router.get("/api/", (req, res) => {

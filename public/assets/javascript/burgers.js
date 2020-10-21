@@ -28,5 +28,6 @@ function addBurger(event) {
         method: "POST",
         data: burger,
     });
-    // location.reload();
+
+    location.reload();
 }

@@ -9,8 +9,13 @@ const burger = {
     insert: function(burgerName, cb) {
         orm.insertOne(burgerName, res => {
             cb(res);
-        })
-    }
+        });
+    },
+    update: function(id, cb) {
+        orm.updateOne(id, res => {
+            cb(res);
+        });
+    },
 }
 
 module.exports = burger;
