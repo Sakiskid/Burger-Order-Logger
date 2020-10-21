@@ -8,5 +8,14 @@ CREATE TABLE burgers
     id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(40) NOT NULL,
     eaten BOOLEAN NOT NULL,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    menu_id INT NOT NULL,
     PRIMARY KEY (id) 
-)
+);
+
+CREATE TABLE menu (
+    id INT NOT NULL AUTO_INCREMENT,
+    burger_name VARCHAR(40) NOT NULL,
+    burger_description VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
