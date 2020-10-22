@@ -1,3 +1,36 @@
+// The formatting for each selector is as follows:
+// Display > Style > Animation > Other
+
+$clr-orange: #F6C654;
+$clr-yellow: #FFE557;
+$clr-lightgreen: #B7FF57;
+$clr-blue: #53A7CF;
+$clr-black: #081C29;
+$clr-white: #F5F7ED;
+
+#menu-container {
+    // Display
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    // Style
+    background-color: red;
+
+    .menu-burger {
+        // Display
+        flex-grow: 1;
+
+        width: 10%;
+        height: 80%;
+        margin: 0 1vw;
+        // Style
+        h2 {
+            font-weight: 700;
+        }
+    }
+}
+
 #burger-container {
     display: grid;
     grid-template-columns: [start] 1fr [uneaten] 1fr 0.5fr [eaten] 1fr [end] 1fr;
