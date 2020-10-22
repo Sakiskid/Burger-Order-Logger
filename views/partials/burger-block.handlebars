@@ -3,9 +3,22 @@
         {{burger_name}}
     </div>
     {{#unless eaten}}
-        <button class="burger-btn-eat" onclick="eatBurger({{id}})">
-            Order Up!
-        </button>
+        <div class="burger-btns-wrapper">
+            <button class="burger-btn-eat" onclick="eatBurger({{id}})">
+                Order Up!
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
     {{/unless}}
+    {{#if eaten}}
+        <div class="burger-btns-wrapper">
+            <button>
+                <i class="fas fa-undo"></i>
+            </button>
+            <button>
+                <i class="fas fa-check-square"></i> 
+            </button>
+        </div>
+    {{/if}}
 
 </div>

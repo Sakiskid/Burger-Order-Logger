@@ -1,39 +1,90 @@
+body {
+  background-color: #264C5E;
+}
+
+h1 {
+  font-size: 10vw;
+  font-family: "Caveat", serif;
+  text-align: center;
+}
+
 #menu-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 20vh;
-  background-color: red;
+  background-color: #081C29;
 }
 #menu-container .menu-burger {
   flex-grow: 1;
   width: 10%;
   height: 80%;
   margin: 0 1vw;
+  background-color: #F5F7ED;
+  border-radius: 10% 10% 20% 20%;
+  box-shadow: #53A7CF 3px 3px;
 }
 #menu-container .menu-burger h2 {
   font-weight: 700;
+  padding-bottom: 5px;
 }
 
 #burger-container {
+  height: 80vh;
   display: grid;
-  grid-template-columns: [start] 1fr [uneaten] 1fr 0.5fr [eaten] 1fr [end] 1fr;
+  grid-template-columns: [uneaten] 1fr [eaten] 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: #264C5E;
+}
+#burger-container h1#burger-title-uneaten {
+  grid-row: 1;
+  grid-column: uneaten;
+  color: #F6C654;
+}
+#burger-container h1#burger-title-eaten {
+  grid-row: 1;
+  grid-column: eaten;
+  color: #B7FF57;
+}
+#burger-container .burger-card {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
+  overflow: hidden;
+  background-color: #F5F7ED;
+  border: black solid 2px;
+  border-radius: inherit;
+  box-shadow: #53A7CF 2px 2px;
+}
+#burger-container .burger-card .burger-card-title {
+  margin-bottom: 10px;
+}
+#burger-container .burger-card .burger-btn-eat {
+  margin-left: -10%;
+  width: 120%;
+  height: 100%;
+  border: 0;
+  background-color: #F6C654;
+}
+#burger-container .burger-card .burger-btns-wrapper {
+  display: flex;
+  margin-left: -5%;
+  flex-basis: 20%;
+  width: 110%;
+  padding: 2px 0px;
+  border: 0px;
+  border-top: 2px solid #081C29;
+  justify-content: space-evenly;
+  background-color: #F6C654;
 }
 #burger-container #burger-container-eaten {
+  padding: 0px 25%;
+  position: relative;
   grid-column: eaten;
-  grid-row: 2/span 2;
+  grid-row: 2;
 }
 #burger-container #burger-container-uneaten {
+  padding: 0px 25%;
   grid-column: uneaten;
-  grid-row: 2/span 2;
-}
-
-.burger-card {
-  margin: 15px 0px;
-  border: black solid 2px;
-}
-
-.burger-card-title {
-  margin-bottom: 25px;
+  grid-row: 2;
 }
