@@ -12,10 +12,10 @@
     {{/unless}}
     {{#if eaten}}
         <div class="burger-btns-wrapper">
-            <button>
+            <button onclick="sendBack({{id}})">
                 <i class="fas fa-undo"></i>
             </button>
-            <button>
+            <button onclick="checkOff({{id}})">
                 <i class="fas fa-check-square"></i> 
             </button>
         </div>

@@ -82,9 +82,11 @@ h1 {
   position: relative;
   grid-column: eaten;
   grid-row: 2;
+  align-items: flex-start;
 }
 #burger-container #burger-container-uneaten {
   padding: 0px 25%;
   grid-column: uneaten;
   grid-row: 2;
+  align-items: flex-start;
 }

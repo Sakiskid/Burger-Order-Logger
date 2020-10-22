@@ -2,7 +2,6 @@ const express = require('express');
 const burger = require('../models/burger.js');
 
 const router = express.Router();
-console.log("test");
 
 router.get("/", (req, res) => {
     burger.all(function (data) {
@@ -12,20 +11,21 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-    console.log("Post req.body:", req.body.burgerName);
     burger.insert(req.body.burgerName, function (data) {
         res.end();
     })
 })
 
 router.put("/", (req, res) => {
-    burger.update(req.body.id, function(data) {
+    burger.update(req.body.id, req.body.eaten, function(data) {
         res.end();
     })
 });
 
-router.get("/api/", (req, res) => {
-   console.log("api"); 
+router.delete("/", (req, res) => {
+    burger.delete(req.body.id, function(data) {
+        res.end();
+    });
 });
 
 

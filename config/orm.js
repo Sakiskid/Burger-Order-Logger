@@ -17,16 +17,24 @@ const orm = {
             cb(res);
         });
     },
-    updateOne: function (id, cb) {
+    updateOne: function (id, eaten, cb) {
         let query = `
             UPDATE burgers
-            SET eaten = 1
+            SET eaten = ?
             WHERE id = ?`;   
-        connection.query(query, [id], (err, res) => {
+        connection.query(query, [eaten, id], (err, res) => {
             if(err) throw err;
             cb(res);
-        })
-    }
+        });
+    },
+    delete: function (id, cb) {
+        let query = `
+        DELETE FROM burgers WHERE id = ?`;
+        connection.query(query, [id], (err, res) => {
+            if (err) throw err;
+            cb(res);
+        });
+    },
 }
 
 module.exports = orm;

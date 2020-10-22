@@ -11,8 +11,13 @@ const burger = {
             cb(res);
         });
     },
-    update: function(id, cb) {
-        orm.updateOne(id, res => {
+    update: function(id, eaten, cb) {
+        orm.updateOne(id, eaten, res => {
+            cb(res);
+        });
+    },
+    delete: function(id, cb) {
+        orm.delete(id, res => {
             cb(res);
         });
     },

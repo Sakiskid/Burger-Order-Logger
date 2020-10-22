@@ -58,6 +58,7 @@ h1 {
     display: grid;
     grid-template-columns: [uneaten] 1fr [eaten] 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    
     // Style
     background-color: $clr-lighter-black;
 
@@ -118,14 +119,13 @@ h1 {
         position: relative;
         grid-column: eaten;
         grid-row: 2;
-        // background-color: $clr-lightgreen;
-
+        align-items: flex-start;
     }
     
     #burger-container-uneaten {
         padding: 0px 25%;
         grid-column: uneaten;
         grid-row: 2;
-        // background-color: $clr-red;
+        align-items: flex-start;
     }
 }
